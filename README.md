@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Object Inheritance, Composition and Mixins in Ruby
+# Object Inheritance, Composition, and Mixins in Ruby
 
 ## Prerequisites
 
@@ -12,7 +12,6 @@
 By the end of this, developers should be able to:
 
 -   Give two reasons why inheritance and Mixins are desirable.
--   Write a class which inherits from another class.
 -   Write a mixin
 -   Describe the difference between inheritance, composition, and mixins
 
@@ -65,12 +64,12 @@ lemonade.tracks << Song.new('Formation')
 ```
 
 Sometimes, we want build more complex object by using specific instances of other
- objects. We can use composition to acheive this. In this case, we will add
+ objects. We can use composition to achieve this. In this case, we will add
  instances of the `Song` class to the tracks of our album.
 
 ## Ruby Mixins
 
-We want to make chunks of code that are resuable across of multiple classes.
+We want to make chunks of code that are resuable across multiple classes.
 These "chunks" are called `modules`. Take a look at the code below:
 
 ```ruby
@@ -119,7 +118,7 @@ Open the file `lib/equine.rb`
 
 - Create a class `Equine` with a method `eat_grass`
 - Create three classes `Horse`, `Zebra`, and `Mule` that inherit from `Equine`
-- Create a mixin `Ridable` with a method `ride`
+- Create a mixin `Rideable` with a method `ride`
 - Include that method in the `Horse` and `Mule` class
 
 Use `bin/rake test` to test your code.
