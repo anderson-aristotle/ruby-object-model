@@ -70,7 +70,7 @@ Sometimes, we want build more complex object by using specific instances of othe
 
 ## Ruby Mixins
 
-We want to make chunks of code that are resuable across of multiple classes.
+We want to make chunks of code that are resuable across multiple classes.
 These "chunks" are called `modules`. Take a look at the code below:
 
 ```ruby
