@@ -12,7 +12,6 @@
 By the end of this, developers should be able to:
 
 -   Give two reasons why inheritance and Mixins are desirable.
--   Write a class which inherits from another class.
 -   Write a mixin
 -   Describe the difference between inheritance, composition, and mixins
 
