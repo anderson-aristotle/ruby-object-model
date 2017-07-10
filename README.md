@@ -65,7 +65,7 @@ lemonade.tracks << Song.new('Formation')
 ```
 
 Sometimes, we want build more complex object by using specific instances of other
- objects. We can use composition to acheive this. In this case, we will add
+ objects. We can use composition to achieve this. In this case, we will add
  instances of the `Song` class to the tracks of our album.
 
 ## Ruby Mixins
