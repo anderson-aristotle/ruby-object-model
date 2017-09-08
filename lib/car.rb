@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # define Class Car
 class Car
   attr_reader :engine

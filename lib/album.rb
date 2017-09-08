@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # A class of albums
 class Album
   attr_accessor :tracks

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # define module Sleeper
 module Sleepable
   def go_to_sleep
