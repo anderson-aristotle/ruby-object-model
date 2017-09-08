@@ -4,7 +4,7 @@
 class Album
   attr_accessor :tracks
 
-  def initialze
+  def initialize
     @tracks = []
   end
 end

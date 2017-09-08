@@ -4,28 +4,34 @@
 
 ## Prerequisites
 
--   [ga-wdi-boston/ruby-object](https://github.com/ga-wdi-boston/ruby-object)
--   [ga-wdi-boston/ruby-object-inheritance](https://github.com/ga-wdi-boston/ruby-objecs-inheritance)
+-   [ga-wdi-boston/ruby-object](https://git.generalassemb.ly/ga-wdi-boston/ruby-object)
+-   [ga-wdi-boston/ruby-object-inheritance](https://git.generalassemb.ly/ga-wdi-boston/ruby-object-inheritance)
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
 -   Give two reasons why inheritance and Mixins are desirable.
--   Write a mixin
--   Describe the difference between inheritance, composition, and mixins
+-   Write a mixin.
+-   Describe the difference between inheritance, composition, and mixins.
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
+1.  Fork and clone this repository.
+ [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Create a new branch, `training`, for your work.
+1.  Checkout to the `training` branch.
 1.  Install dependencies with `bundle install`.
 
 ## Ruby Inheritance
 
 Let's discuss the code below:
 
-```ruby
+<!-- start code block file="snippets/car.rb" -->
+```rb
+# frozen_string_literal: true
+
+# define Class Car
 class Car
   attr_reader :engine
   def initialize
@@ -33,18 +39,24 @@ class Car
   end
 end
 
+# define Class Ford
 class Ford < Car
 end
 
 focus = Ford.new
 puts focus.engine
 ```
+<!-- end code block -->
 
 Whenever I create a new instance of a `Ford`, Ruby looks for a method called `initialize`. In this case, it doesn't find that method on the `Ford` class, so it finds the method on it's parent `Car`. `focus` is an instance of the `Car` class,  so *it inherits all of methods defined in the `Car` class.*
 
 ## Ruby Composition
 
-```ruby
+<!-- start code block file="snippets/album.rb" -->
+```rb
+# frozen_string_literal: true
+
+# A class of albums
 class Album
   attr_accessor :tracks
 
@@ -53,18 +65,20 @@ class Album
   end
 end
 
+# A class of songs
 class Song
   def initialize(title)
     @title = title
   end
 end
 
-lemonade = Album.new()
+lemonade = Album.new
 lemonade.tracks << Song.new('Formation')
 ```
+<!-- end code block -->
 
-Sometimes, we want build more complex object by using specific instances of other
- objects. We can use composition to achieve this. In this case, we will add
+Sometimes, we want build a more complex object by using specific instances of
+other objects. We can use composition to achieve this. In this case, we will add
  instances of the `Song` class to the tracks of our album.
 
 ## Ruby Mixins
@@ -72,21 +86,28 @@ Sometimes, we want build more complex object by using specific instances of othe
 We want to make chunks of code that are resuable across multiple classes.
 These "chunks" are called `modules`. Take a look at the code below:
 
-```ruby
+<!-- start code block file="snippets/sleeper.rb" -->
+```rb
+# frozen_string_literal: true
+
+# define module Sleeper
 module Sleepable
   def go_to_sleep
     # code here
   end
 end
 
+# define Class Person
 class Person
   include Sleepable
 end
 
+# define Class Computer
 class Computer
   include Sleepable
 end
 ```
+<!-- end code block -->
 
 In the code above we defined a `module` called Sleepable. We also define a
 `Person` class and a `Computer` class. By using the keyword `include` followed
@@ -116,10 +137,10 @@ state.
 
 Open the file `lib/equine.rb`
 
-- Create a class `Equine` with a method `eat_grass`
-- Create three classes `Horse`, `Zebra`, and `Mule` that inherit from `Equine`
-- Create a mixin `Rideable` with a method `ride`
-- Include that method in the `Horse` and `Mule` class
+- Create a class `Equine` with a method `eat_grass`.
+- Create three classes `Horse`, `Zebra`, and `Mule` that inherit from `Equine`.
+- Create a mixin `Rideable` with a method `ride`.
+- Include that method in the `Horse` and `Mule` class.
 
 Use `bin/rake test` to test your code.
 

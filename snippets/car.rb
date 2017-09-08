@@ -13,5 +13,4 @@ class Ford < Car
 end
 
 focus = Ford.new
-
 puts focus.engine
