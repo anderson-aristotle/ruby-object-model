@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# define Class Car
 class Car
   attr_reader :engine
   def initialize
@@ -5,6 +8,7 @@ class Car
   end
 end
 
+# define Class Ford
 class Ford < Car
 end
 
