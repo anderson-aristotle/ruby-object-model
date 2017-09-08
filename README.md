@@ -28,7 +28,24 @@ By the end of this, developers should be able to:
 Let's discuss the code below:
 
 <!-- start code block file="snippets/car.rb" -->
+```rb
+# frozen_string_literal: true
 
+# define Class Car
+class Car
+  attr_reader :engine
+  def initialize
+    @engine = 1200
+  end
+end
+
+# define Class Ford
+class Ford < Car
+end
+
+focus = Ford.new
+puts focus.engine
+```
 <!-- end code block -->
 
 Whenever I create a new instance of a `Ford`, Ruby looks for a method called `initialize`. In this case, it doesn't find that method on the `Ford` class, so it finds the method on it's parent `Car`. `focus` is an instance of the `Car` class,  so *it inherits all of methods defined in the `Car` class.*
@@ -36,7 +53,28 @@ Whenever I create a new instance of a `Ford`, Ruby looks for a method called `in
 ## Ruby Composition
 
 <!-- start code block file="snippets/album.rb" -->
+```rb
+# frozen_string_literal: true
 
+# A class of albums
+class Album
+  attr_accessor :tracks
+
+  def initialize
+    @tracks = []
+  end
+end
+
+# A class of songs
+class Song
+  def initialize(title)
+    @title = title
+  end
+end
+
+lemonade = Album.new
+lemonade.tracks << Song.new('Formation')
+```
 <!-- end code block -->
 
 Sometimes, we want build more complex object by using specific instances of other
@@ -49,7 +87,26 @@ We want to make chunks of code that are resuable across multiple classes.
 These "chunks" are called `modules`. Take a look at the code below:
 
 <!-- start code block file="snippets/sleeper.rb" -->
+```rb
+# frozen_string_literal: true
 
+# define module Sleeper
+module Sleepable
+  def go_to_sleep
+    # code here
+  end
+end
+
+# define Class Person
+class Person
+  include Sleepable
+end
+
+# define Class Computer
+class Computer
+  include Sleepable
+end
+```
 <!-- end code block -->
 
 In the code above we defined a `module` called Sleepable. We also define a
