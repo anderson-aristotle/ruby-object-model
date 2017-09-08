@@ -27,43 +27,17 @@ By the end of this, developers should be able to:
 
 Let's discuss the code below:
 
-```ruby
-class Car
-  attr_reader :engine
-  def initialize
-    @engine = 1200
-  end
-end
+<!-- start code block file="snippets/car.rb" -->
 
-class Ford < Car
-end
-
-focus = Ford.new
-puts focus.engine
-```
+<!-- end code block -->
 
 Whenever I create a new instance of a `Ford`, Ruby looks for a method called `initialize`. In this case, it doesn't find that method on the `Ford` class, so it finds the method on it's parent `Car`. `focus` is an instance of the `Car` class,  so *it inherits all of methods defined in the `Car` class.*
 
 ## Ruby Composition
 
-```ruby
-class Album
-  attr_accessor :tracks
+<!-- start code block file="snippets/album.rb" -->
 
-  def initialize
-    @tracks = []
-  end
-end
-
-class Song
-  def initialize(title)
-    @title = title
-  end
-end
-
-lemonade = Album.new()
-lemonade.tracks << Song.new('Formation')
-```
+<!-- end code block -->
 
 Sometimes, we want build more complex object by using specific instances of other
  objects. We can use composition to achieve this. In this case, we will add
@@ -74,21 +48,9 @@ Sometimes, we want build more complex object by using specific instances of othe
 We want to make chunks of code that are resuable across multiple classes.
 These "chunks" are called `modules`. Take a look at the code below:
 
-```ruby
-module Sleepable
-  def go_to_sleep
-    # code here
-  end
-end
+<!-- start code block file="snippets/sleeper.rb" -->
 
-class Person
-  include Sleepable
-end
-
-class Computer
-  include Sleepable
-end
-```
+<!-- end code block -->
 
 In the code above we defined a `module` called Sleepable. We also define a
 `Person` class and a `Computer` class. By using the keyword `include` followed
