@@ -4,8 +4,8 @@
 
 ## Prerequisites
 
--   [ga-wdi-boston/ruby-object](https://github.com/ga-wdi-boston/ruby-object)
--   [ga-wdi-boston/ruby-object-inheritance](https://github.com/ga-wdi-boston/ruby-objecs-inheritance)
+-   [ga-wdi-boston/ruby-object](https://git.generalassemb.ly/ga-wdi-boston/ruby-object)
+-   [ga-wdi-boston/ruby-object-inheritance](https://git.generalassemb.ly/ga-wdi-boston/ruby-object-inheritance)
 
 ## Objectives
 
@@ -18,7 +18,7 @@ By the end of this, developers should be able to:
 ## Preparation
 
 1.  Fork and clone this repository.
- [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+ [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
 1.  Create a new branch, `training`, for your work.
 1.  Checkout to the `training` branch.
 1.  Install dependencies with `bundle install`.
