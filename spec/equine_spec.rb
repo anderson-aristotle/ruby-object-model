@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable BlockLength
 require_relative '../lib/equine.rb'
 
 describe 'Equine' do

@@ -23,6 +23,12 @@ By the end of this, developers should be able to:
 1.  Checkout to the `training` branch.
 1.  Install dependencies with `bundle install`.
 
+## Overview
+
+|Inheritance|Composition|Mixin|
+|--|--|
+|Car `is-a` Vehicle|Car `has-a` Driver|Car `behaves-as` Motorized|
+
 ## Ruby Inheritance
 
 Let's discuss the code below:
