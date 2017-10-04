@@ -25,9 +25,9 @@ By the end of this, developers should be able to:
 
 ## Overview
 
-|Inheritance|Composition|Mixin|
-|--|--|
-|Car `is-a` Vehicle|Car `has-a` Driver|Car `behaves-as` Motorized|
+| Inheritance   | Composition   | Mixin |
+|:-------------:|:-------------:|:-----:|
+| Car `is-a` Vehicle | Car `has-a` Driver | Car `behaves-as` Motorized |
 
 ## Ruby Inheritance
 
