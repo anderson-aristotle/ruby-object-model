@@ -145,8 +145,8 @@ Open the file `lib/equine.rb`
 
 - Create a class `Equine` with a method `eat_grass`.
 - Create three classes `Horse`, `Zebra`, and `Mule` that inherit from `Equine`.
-- Create a mixin `Rideable` with a method `ride`.
-- Include that method in the `Horse` and `Mule` class.
+- Create a module `Rideable` with a method `ride`.
+- Include that method in the `Horse` and `Mule` classes by "mixing in" the `Rideable` module.
 
 Use `bin/rake test` to test your code.
 
