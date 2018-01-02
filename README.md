@@ -122,8 +122,6 @@ we defined in our module.  This is great because it allows us to keep our code
 *D-R-Y*, not to mention it allows us to be lazy developers (the good kind of
 lazy).
 
-You will sometimes hear the word 'composition' when referring to mixins.
-
 ## What should I use?
 
 `is-a`: A Ford *is a* car. Inheritance creates a *subclass* - a class that has access to all of the methods of it's parent class. You should use it if your class is a *type* of it's parent class, like Ford is a type of car. A Ford is a more specialized, less abstract version of the Car class.
