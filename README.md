@@ -25,6 +25,13 @@ By the end of this, developers should be able to:
 
 ## Overview
 
+In a large application, it's common for different areas of the app to require similiar
+functionality. To save time and mental bandwidth, we try to reuse the same code in
+multiple places whenever possible. How should we achieve that?
+
+We don't want to copy and paste, because it's error prone and goes against the idea of keeping our code DRY. In object-oriented languages like Ruby, we have a few choices -- we can use inheritance, composition, or mixins. Let's look at how these concepts differ
+and we when we might prefer one over another.
+
 | Inheritance   | Composition   | Mixin |
 |:-------------:|:-------------:|:-----:|
 | Car `is-a` Vehicle | Car `has-a` Driver | Car `behaves-as` Motorized |
@@ -150,6 +157,7 @@ Use `bin/rake test` to test your code.
 
 ## Additional Resources
 
+-   [Re-use in OO: inheritance, composition, and Mixins](http://naildrivin5.com/blog/2012/12/19/re-use-in-oo-inheritance.html)
 -   [Useful links to documentation](https://www.ruby-lang.org/en/documentation/)
 -   [Stack Overflow: Inheriterance](http://stackoverflow.com/questions/15754768/when-do-we-use-ruby-module-vs-using-class-composition)
 
