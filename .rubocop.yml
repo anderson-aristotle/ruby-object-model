@@ -8,6 +8,6 @@ Style/FrozenStringLiteralComment:
 
 AllCops:
   TargetRubyVersion:
-    2.3
+    2.5
   Exclude:
     - 'spec/spec_helper.rb'
