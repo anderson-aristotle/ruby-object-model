@@ -87,7 +87,7 @@ lemonade = Album.new
 lemonade.tracks << Song.new('Formation')
 ```
 
-Sometimes, we want build a more complex object by using specific instances of
+Sometimes, we want to build a more complex object by using specific instances of
 other objects. We can use composition to achieve this. In this case, we will add
  instances of the `Song` class to the tracks of our album.
 
@@ -115,7 +115,7 @@ class Computer
 end
 ```
 
-In the code above we defined a `module` called Sleepable. We also define a
+In the code above, we defined a `module` called Sleepable. We also define a
 `Person` class and a `Computer` class. By using the keyword `include` followed
 by the name of the module (in this case `Sleepable`) we have access to the methods
 we defined in our module.  This is great because it allows us to keep our code
@@ -124,23 +124,26 @@ lazy).
 
 ## What should I use
 
-`is-a`: A Ford *is a* car. Inheritance creates a *subclass* - a class that has
+- `is-a`: A Ford *is a* car.
+  - Inheritance creates a *subclass* - a class that has
 access to all of the methods of it's parent class. You should use it if your
 class is a *type* of it's parent class, like Ford is a type of car. A Ford is a
 more specialized, less abstract version of the Car class.
 
-`has-a`: An Album *has a* song on it. We use composition when class instances
+- `has-a`: An Album *has a* song on it.
+  - We use composition when class instances
 contain instances of other classes.
 
-`behaves-as`: Mixins are used when a *behavior* is shared between various
-classes. People and computers both share the sleep behavior in the example
+- `behaves-as`: Mixins are used when a *behavior* is shared between various
+classes.
+  - People and computers both share the sleep behavior in the example
 above. People and computers are very different - it wouldn't make sense for them
 to inherit from the `Sleepable` class.
 
 ### Class or mixin
 
 When deciding whether to write a class or mixin, ask yourself if what you're
-writing will need an initialize function. If you do, you should be writing a
+writing will need an `initialize` function. If you do, you should be writing a
 class. Classes have state and behavior. Mixins are only for behavior - they
 don't hold state.
 
