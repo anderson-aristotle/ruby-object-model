@@ -42,11 +42,7 @@ these concepts differ and we when we might prefer one over another.
 
 Let's discuss the code below:
 
-<!-- start code block file="snippets/car.rb" -->
-
 ```rb
-# frozen_string_literal: true
-
 # define Class Car
 class Car
   attr_reader :engine
@@ -63,8 +59,6 @@ focus = Ford.new
 puts focus.engine
 ```
 
-<!-- end code block -->
-
 Whenever I create a new instance of a `Ford`, Ruby looks for a method called
 `initialize`. In this case, it doesn't find that method on the `Ford` class, so
 it finds the method on it's parent `Car`. `focus` is an instance of the `Car`
@@ -72,11 +66,7 @@ class,  so *it inherits all of methods defined in the `Car` class.*
 
 ## Ruby Composition
 
-<!-- start code block file="snippets/album.rb" -->
-
 ```rb
-# frozen_string_literal: true
-
 # A class of albums
 class Album
   attr_accessor :tracks
@@ -97,8 +87,6 @@ lemonade = Album.new
 lemonade.tracks << Song.new('Formation')
 ```
 
-<!-- end code block -->
-
 Sometimes, we want build a more complex object by using specific instances of
 other objects. We can use composition to achieve this. In this case, we will add
  instances of the `Song` class to the tracks of our album.
@@ -108,11 +96,7 @@ other objects. We can use composition to achieve this. In this case, we will add
 We want to make chunks of code that are reusable across multiple classes.
 These "chunks" are called `modules`. Take a look at the code below:
 
-<!-- start code block file="snippets/sleeper.rb" -->
-
 ```rb
-# frozen_string_literal: true
-
 # define module Sleeper
 module Sleepable
   def go_to_sleep
@@ -130,8 +114,6 @@ class Computer
   include Sleepable
 end
 ```
-
-<!-- end code block -->
 
 In the code above we defined a `module` called Sleepable. We also define a
 `Person` class and a `Computer` class. By using the keyword `include` followed
